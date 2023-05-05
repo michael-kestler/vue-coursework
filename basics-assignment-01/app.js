@@ -1,7 +1,9 @@
 const app = Vue.createApp({
     data(){
         return{
-            yourName: 'Michael Kestler'
+            yourName: 'Michael Kestler',
+            yourAge: 'Age: 31',
+            ageInFive: 'Age in 5 years: 36'
 
         }
     }
