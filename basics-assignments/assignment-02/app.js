@@ -3,7 +3,7 @@ const app = Vue.createApp({
     data() {
         return{
             userInput: "",
-            userInput2: ""
+            savedInput: ""
         };
     },
 
@@ -17,8 +17,8 @@ const app = Vue.createApp({
             this.userInput = event.target.value;
         },
     
-        setOutput2(event){
-            this.userInput2 = event.target.value;
+        setOutput2(){
+            this.savedInput = this.userInput;
         }
 }
     
