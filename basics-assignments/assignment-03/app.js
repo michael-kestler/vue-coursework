@@ -6,6 +6,16 @@ const app = Vue.createApp({
         }
     },
 
+    watch: {
+        counter(value){
+            const that = this;
+            setTimeout(function(){
+                that.counter = 0;
+            }, 5000);
+        }
+    },
+
+
     computed: {
         statusMessage(){
             if(this.counter < 37){
