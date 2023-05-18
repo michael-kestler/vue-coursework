@@ -6,6 +6,20 @@ const app = Vue.createApp({
         }
     },
 
+    computed: {
+        statusMessage(){
+            if(this.counter < 37){
+              return "Not there yet"
+        } else if (this.counter > 37){
+            return "Too much!"
+        } else {
+            return "You got it!"
+        }
+
+    }
+        
+    },
+
     methods: {
 
         add(num){
