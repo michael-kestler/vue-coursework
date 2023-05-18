@@ -8,13 +8,16 @@ const app = Vue.createApp({
 
     watch: {
         counter(value){
-            const that = this;
+            if(value >= 37){
+                const that = this;
             setTimeout(function(){
                 that.counter = 0;
             }, 5000);
+
+            }
+            
         }
     },
-
 
     computed: {
         statusMessage(){
@@ -23,7 +26,7 @@ const app = Vue.createApp({
         } else if (this.counter > 37){
             return "Too much!"
         } else {
-            return "You got it!"
+            return "You got it!";
         }
 
     }
@@ -37,8 +40,6 @@ const app = Vue.createApp({
         }
 
     }
-
-
 })
 
 app.mount('#assignment');
