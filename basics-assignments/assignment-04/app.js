@@ -3,7 +3,8 @@ const app = Vue.createApp({
     data(){
         return{
            userInput: '',
-           paragraphIsVisible: true
+           paragraphIsVisible: true,
+           inputBC: ''
         }
 
     },
