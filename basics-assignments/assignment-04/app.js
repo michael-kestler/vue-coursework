@@ -2,12 +2,20 @@ const app = Vue.createApp({
 
     data(){
         return{
-           userInput: ''
+           userInput: '',
+           user1: false,
+           user2: false
+
         }
 
     },
 
     methods: {
+       userSelected(userInput){
+            if(userInput === user1){
+                
+            }
+       }
 
     }
 
