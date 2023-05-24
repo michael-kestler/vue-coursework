@@ -33,12 +33,10 @@ const app = Vue.createApp({
     //   };
     // },
 
-    buttonCaption(){
-      return this.listIsVisible ? 'Hide List' : 'Show List';
-    }
-
-
-  }
+    buttonCaption() {
+      return this.listIsVisible ? "Hide List" : "Show List";
+    },
+  },
 });
 
 app.mount("#assignment");
