@@ -16,7 +16,16 @@ const app = Vue.createApp ({
         hideShow(){
             
                 this.listIsVisible = !this.listIsVisible;
+            },
+
+            hideShowCaption(){
+                if (this.listIsVisible){
+                    return "Hide"
+                } else {
+                    return "Show"
+                }
             }
+           
             
         },
 
