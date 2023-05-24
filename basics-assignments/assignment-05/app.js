@@ -16,23 +16,29 @@ const app = Vue.createApp({
       this.listIsVisible = !this.listIsVisible;
     },
 
-    hideShowCaption() {
-      if (this.listIsVisible) {
-        return "Hide";
-      } else {
-        return "Show";
-      }
-    },
+    // hideShowCaption() {
+    //   if (this.listIsVisible) {
+    //     return "Hide";
+    //   } else {
+    //     return "Show";
+    //   }
+    // },
   },
 
   computed: {
-    listClasses() {
-      return {
-        hidden: !this.listIsVisible,
-        visible: this.listIVisible,
-      };
-    },
-  },
+    // listClasses() {
+    //   return {
+    //     hidden: !this.listIsVisible,
+    //     visible: this.listIVisible,
+    //   };
+    // },
+
+    buttonCaption(){
+      return this.listIsVisible ? 'Hide List' : 'Show List';
+    }
+
+
+  }
 });
 
 app.mount("#assignment");
