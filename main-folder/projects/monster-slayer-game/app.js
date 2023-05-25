@@ -8,12 +8,14 @@ const app = Vue.createApp({
     return {
       playerHealth: 100,
       monsterHealth: 100,
+      currentRound: 0,
     };
   },
 
   methods: {
     //when the attack button is clicked we want to trigger a method that reduces the monster's health
     attackMonster() {
+      this.currentRound++;  
       const attackValue = getRandomValue(5, 12);
       // this.monsterHealth = this.monsterHealth - attackValue;
       this.monsterHealth -= attackValue;
@@ -27,24 +29,24 @@ const app = Vue.createApp({
       this.playerHealth -= attackValue;
     },
 
-    specialAttackMonster(){
-        const attackValue = getRandomValue(10, 25);
-        this.monsterHealth -= attackValue;
-        this.attackPlayer();
-    }
+    //this method should only be available every three rounds
+    specialAttackMonster() {
+      this.currentRound++;
+      const attackValue = getRandomValue(10, 25);
+      this.monsterHealth -= attackValue;
+      this.attackPlayer();
+    },
   },
 
-  computed:{
-    monsterBarStyles(){
-        return {width: this.monsterHealth + '%'}
+  computed: {
+    monsterBarStyles() {
+      return { width: this.monsterHealth + "%" };
     },
 
-    playerBarStyles(){
-        return {width: this.playerHealth + '%'}
-    }
-  }
-
-
+    playerBarStyles() {
+      return { width: this.playerHealth + "%" };
+    },
+  },
 });
 
 app.mount("#game");
