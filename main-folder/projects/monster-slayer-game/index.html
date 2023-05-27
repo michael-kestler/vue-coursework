@@ -36,7 +36,7 @@
         <h3 v-else>It's a draw!</h3>
         <button @click="startGame">Start New Game</button>
       </section>
-      <section id="controls">
+      <section id="controls" v-else>
         <!-- attack button should reduce monster's health -->
         <button @click="attackMonster">ATTACK</button>
         <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">SPECIAL ATTACK</button>
