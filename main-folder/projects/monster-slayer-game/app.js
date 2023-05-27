@@ -14,6 +14,14 @@ const app = Vue.createApp({
   },
 
   methods: {
+      startGame(){
+        this.playerHealth = 100;
+        this.monsterHealth = 100;
+        this.winner = null;
+        this.currentRound = 0;
+
+      },
+
     //when the attack button is clicked we want to trigger a method that reduces the monster's health
     attackMonster() {
       this.currentRound++;  
