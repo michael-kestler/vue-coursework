@@ -31,7 +31,6 @@ const app = Vue.createApp({
       // this.monsterHealth = this.monsterHealth - attackValue;
       this.monsterHealth -= attackValue;
       this.addLogMessage('player', 'attack', attackValue)
-
       // when player attacks monster attack player method is triggered
       this.attackPlayer();
     },
@@ -68,7 +67,7 @@ const app = Vue.createApp({
 
     addLogMessage(who, what, value) {
         this.logMessages.unshift({
-          action: who,
+          actionBy: who,
           actionType: what,
           actionValue: value
         });
